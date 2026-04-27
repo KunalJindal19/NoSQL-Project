@@ -392,6 +392,13 @@ public class CLI {
             try { currentDb.cleanup(); } catch (Exception ignored) {}
         }
         if (mysqlStore != null) {
+            try {
+                System.out.println("  " + YELLOW + "ℹ Exporting results to query_results_output.txt..." + RESET);
+                mysqlStore.exportAllResultsToFile("query_results_output.txt");
+                printSuccess("Export complete.");
+            } catch (Exception e) {
+                printError("Failed to export: " + e.getMessage());
+            }
             mysqlStore.close();
         }
         System.out.println(GREEN + "Goodbye!" + RESET);
