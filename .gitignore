@@ -9,6 +9,5 @@ mongodb-data/
 *.swp
 *.swo
 mongodb-data/**/**
-sql/**/**
 target/**/**
 logs/**/**
