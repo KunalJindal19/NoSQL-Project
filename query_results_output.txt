@@ -1,0 +1,12 @@
+Database
+companydb
+information_schema
+mysql
+nasa_project
+outpatients
+performance_schema
+practice1
+practice2
+stockdb
+sys
+test
