@@ -48,9 +48,26 @@ public class CLI {
     private int malformedCount = 0;
 
     public static void main(String[] args) {
-        CLI cli = new CLI();
-        cli.parseArgs(args);
-        cli.run();
+        boolean useCli = false;
+        List<String> cleanedArgs = new ArrayList<>();
+        
+        for (String arg : args) {
+            if (arg.equals("--cli")) {
+                useCli = true;
+            } else {
+                cleanedArgs.add(arg);
+            }
+        }
+        
+        String[] finalArgs = cleanedArgs.toArray(new String[0]);
+        
+        if (useCli) {
+            CLI cli = new CLI();
+            cli.parseArgs(finalArgs);
+            cli.run();
+        } else {
+            com.nasa.loganalytics.gui.GUI.main(finalArgs);
+        }
     }
 
     private void parseArgs(String[] args) {
