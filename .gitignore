@@ -1,0 +1,49 @@
+# ========================
+# Build output
+# ========================
+target/
+dependency-reduced-pom.xml
+
+# ========================
+# IDE files
+# ========================
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+*~
+
+# ========================
+# OS generated files
+# ========================
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+
+# ========================
+# Data files (too large for Git)
+# ========================
+data/
+
+# ========================
+# Temporary ETL files
+# ========================
+/tmp/
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+
+# ========================
+# Prompt & Script Files
+# ========================
+Video_Dialogue_Script.md
+Video_Presentation_Plan.md
+ETL_CLI_Implementation_Prompt.md
+ETL_Project_Implementation_Prompt_Java_Original.md
