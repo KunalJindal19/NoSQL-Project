@@ -77,7 +77,7 @@ public class MongoDBDatabase extends Database {
 
             documents.add(doc);
         }
-
+ 
         if (!documents.isEmpty()) {
             collection.insertMany(documents, new InsertManyOptions().ordered(false));
         }
