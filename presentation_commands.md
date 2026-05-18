@@ -68,6 +68,9 @@ java -jar target/etl-nasa-logs-1.0-SNAPSHOT.jar compare --batch-strategy file_ba
 **Step 7: Show record-count batching (Demonstrates the batch progress UI)**
 ```bash
 java -jar target/etl-nasa-logs-1.0-SNAPSHOT.jar run --pipeline mongodb --query all --batch-strategy record_count --batch-size 500000
+java -jar target/etl-nasa-logs-1.0-SNAPSHOT.jar run --pipeline mapreduce --query all --batch-strategy record_count --batch-size 500000
+java -jar target/etl-nasa-logs-1.0-SNAPSHOT.jar run --pipeline pig --query all --batch-strategy record_count --batch-size 500000
+java -jar target/etl-nasa-logs-1.0-SNAPSHOT.jar run --pipeline hive --query all --batch-strategy record_count --batch-size 500000
 ```
 
 **Step 8: Show Database tables in MySQL**
